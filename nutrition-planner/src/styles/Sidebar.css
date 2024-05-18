@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 12%;
+    height: 100%;
+    background-color: #A9927D;
+    color: #ecf0f1;
+    padding: 20px 10px;
+  }
+  
+  .profile {
+    margin-bottom: 20px;
+  }
+  
+  .profile-icon {
+    font-size: 100px; /* Adjust the size as needed */
+    color: #D0F1BF;
+  }
+  
+  .buttons {
+    width: 100%;
+  }
+  
+  .sidebar-button {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    background-color: #3F403F;
+    color: #ecf0f1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+  }
+  
+  .sidebar-button:hover {
+    background-color: #494b49;
+  }

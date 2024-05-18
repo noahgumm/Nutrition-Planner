@@ -1,0 +1,142 @@
+.deck {
+    width: 200px;
+    height: 200px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.card1, .card2, .card3, .infoCard {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: #D0F1BF;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.card1 {
+    z-index: 1;
+}
+
+.card2 {
+    left: 15px;
+    top: 15px;
+    z-index: 2;
+}
+
+.card3 {
+    left: 20px;
+    top: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    z-index: 3;
+}
+
+.deckBanner {
+    position: absolute;
+    top: 100px;
+    width: 220px;
+    height: 40px;
+    background-color: #3F403F;
+    text-align: center;
+    align-content: center;
+    
+    z-index: 4;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    cursor: pointer;
+}
+
+h3 {
+    color: #f1f2f6;
+}
+
+.infoCard {
+    z-index: 0;
+    color: #3F403F;
+    top: 15px;
+    left: 15px;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+
+@keyframes showCard {
+    0% {
+        transform: translateY(0);
+        z-index: 0;
+    }
+    50% {
+        transform: translateY(110%);
+        z-index: 0;
+    }
+    70% {
+        z-index: 5;
+    }
+    100% {
+        transform: translateY(0);
+        z-index: 5;
+    }
+  }
+  
+  @keyframes hideCard {
+    0% {
+        transform: translateY(0);
+        z-index: 5;
+    }
+    50% {
+        transform: translateY(110%);
+        z-index: 5;
+    }
+    70% {
+        z-index: 0;
+    }
+    100% {
+        transform: translateY(0);
+        z-index: 0;
+    }
+  }
+  
+  .infoCard.visible {
+    z-index: 5;
+    animation-name: showCard;
+    animation-duration: 1s;
+  }
+  
+  .infoCard:not(.visible) {
+    animation-name: hideCard;
+  }
+
+.upArrow {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    z-index: 4;
+    color: black;
+    transform: translateX(-50%);
+    transition: bottom 0.3s ease;
+}
+
+.deck:hover .upArrow {
+    cursor: pointer;
+    bottom: 10px;
+    animation: arrowPulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes arrowPulse {
+    0% {
+        scale: 1;
+    }
+    50% {
+        scale: 1.25
+    }
+    100% {
+        scale: 1;
+    }
+}
+
