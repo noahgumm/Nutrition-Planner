@@ -60,7 +60,25 @@ h3 {
     left: 15px;
     animation-duration: 1s;
     animation-fill-mode: forwards;
-  }
+    padding: 20px;
+}
+
+.infoCard > button {
+    position: absolute;
+    background-color: #3F403F;
+    border-radius: 5px;
+    width: 80px;
+}
+
+.infoCard > button:first-of-type {
+    left: 10px;
+    bottom: 10px;
+}
+
+.infoCard > button:nth-of-type(2) {
+    right: 10px;
+    bottom: 10px;
+}
 
 @keyframes showCard {
     0% {
@@ -78,35 +96,41 @@ h3 {
         transform: translateY(0);
         z-index: 5;
     }
-  }
+}
   
-  @keyframes hideCard {
-    0% {
-        transform: translateY(0);
-        z-index: 5;
-    }
-    50% {
-        transform: translateY(110%);
-        z-index: 5;
-    }
-    70% {
-        z-index: 0;
-    }
-    100% {
-        transform: translateY(0);
-        z-index: 0;
-    }
-  }
+@keyframes hideCard {
+0% {
+    transform: translateY(0);
+    z-index: 5;
+}
+50% {
+    transform: translateY(110%);
+    z-index: 5;
+}
+70% {
+    z-index: 0;
+}
+100% {
+    transform: translateY(0);
+    z-index: 0;
+    visibility: hidden;
+}
+}
   
-  .infoCard.visible {
+.infoCard.visible {
     z-index: 5;
     animation-name: showCard;
     animation-duration: 1s;
-  }
-  
-  .infoCard:not(.visible) {
+    visibility: visible;
+}
+
+.infoCard:not(.visible) {
     animation-name: hideCard;
-  }
+}
+
+.infoCard.notInteracted {
+    visibility: hidden;
+}
 
 .upArrow {
     position: absolute;

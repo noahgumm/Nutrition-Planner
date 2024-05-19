@@ -4,8 +4,10 @@ import { FaRegArrowAltCircleUp } from "react-icons/fa";
 
 function Deck() {
     const [isInfoCardVisible, setInfoCardVisible] = useState(false);
+    const [isInteracted, setInteracted] = useState(false);
 
     const toggleSecondCard = () => {
+        setInteracted(true);
         setInfoCardVisible(!isInfoCardVisible);
     };
 
@@ -24,8 +26,14 @@ function Deck() {
             <div className="card3">
                 <FaRegArrowAltCircleUp className='upArrow' />
             </div>
-            <div className={`infoCard ${isInfoCardVisible ? 'visible' : ''}`} onClick={toggleSecondCard}>
-                Information related to the deck. (Meals, total calories, food types)
+            <div className={`infoCard ${isInfoCardVisible ? 'visible' : ''} ${!isInteracted ? 'notInteracted' : ''}`} onClick={toggleSecondCard}>
+                <ul>
+                    <li>Meals: Breakfast, Lunch, Dinner</li>
+                    <li>Food Groups: Grain, Fruit, Vegetables</li>
+                    <li>Total Calories: 2300</li>
+                </ul>
+                <button>Edit</button>
+                <button>View</button>
             </div>
         </div>
         </>
