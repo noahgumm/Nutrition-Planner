@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './styles/App.css'
-import Sidebar from './Sidebar'
-import Deck from './Deck'
+import Sidebar from './components/Sidebar'
+import Deck from './components/Deck'
 
 function App() {
   const [getCurrentContent, setCurrentContent] = useState(String);
@@ -24,8 +24,31 @@ function App() {
       return (
         <>
           <Sidebar setContent={contentSetter}/>
+          <div className='content-area decks'>
+            <Deck setContent={contentSetter}/>
+            <Deck setContent={contentSetter}/>
+            <Deck setContent={contentSetter}/>
+            <Deck setContent={contentSetter}/>
+            <Deck setContent={contentSetter}/>
+            <Deck setContent={contentSetter}/>
+          </div>
+        </>
+      )
+      break;
+    case "Editing":
+      return (
+        <>
+          <Sidebar setContent={contentSetter}/>
           <div className='content-area'>
-            <Deck />
+          </div>
+        </>
+      )
+      break;
+    case "Viewing":
+      return (
+        <>
+          <Sidebar setContent={contentSetter}/>
+          <div className='content-area'>
           </div>
         </>
       )
@@ -58,7 +81,6 @@ function App() {
       )
       break;
   }
-
 }
 
 export default App

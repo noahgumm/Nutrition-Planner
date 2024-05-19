@@ -1,5 +1,5 @@
 import { FaUser } from 'react-icons/fa'
-import './styles/Sidebar.css'
+import '../styles/Sidebar.css'
 
 interface SidebarProps {
     setContent: (content: string) => void;

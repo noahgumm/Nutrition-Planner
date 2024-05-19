@@ -1,12 +1,18 @@
 .content-area {
   position: absolute;
   top: 5%;
-  right: 4%;
-  width: 80%;
+  left: 14%;
+  width: 85%;
   height: 90%;
   background-color: #A9927D;
   color: #ecf0f1;
 
   border-radius: 10px; /* Rounded corners for a modern look */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+}
+
+.decks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
