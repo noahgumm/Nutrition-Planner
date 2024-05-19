@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './styles/App.css'
 import Sidebar from './components/Sidebar'
 import Deck from './components/Deck'
+import EditDeck from './components/EditDeck'
 
 function App() {
   const [getCurrentContent, setCurrentContent] = useState(String);
@@ -40,6 +41,7 @@ function App() {
         <>
           <Sidebar setContent={contentSetter}/>
           <div className='content-area'>
+            <EditDeck />
           </div>
         </>
       )

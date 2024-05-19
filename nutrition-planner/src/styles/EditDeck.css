@@ -1,0 +1,67 @@
+.deckArea, .cardArea {
+    position:  relative;
+    display: flex;
+    flex-direction: column;
+
+    top: 2.5%;
+
+    height: 95%;
+    width: 46%;
+
+    padding: 10px;
+
+    background-color: #494b49;
+
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.deckArea {
+    float: left;
+
+    align-items: center;
+
+    margin-left: 2%;
+
+    overflow: scroll;
+}
+
+.cardArea {
+    float: right;
+    margin-right: 2%;
+}
+
+.cardList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.breakfastArea, .lunchArea, .dinnerArea, .dessertArea {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+form {
+    position: relative;
+    width: 100%;
+}
+
+input {
+    width: 50%;
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+button {
+    position: relative;
+
+    width: 120px;
+    height: 30px;
+    
+
+    border-radius: 5px;
+}
