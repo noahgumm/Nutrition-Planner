@@ -1,10 +1,12 @@
-class CardData {
+export default class CardData {
     name: string;
+    calories: Number;
     meals: Meals[];
     foodGroups: FoodGroup[];
 
-    constructor(_name: string, _meals: Meals[], _foodGroups: FoodGroup[]) {
+    constructor(_name: string, _calories: Number, _meals: Meals[], _foodGroups: FoodGroup[]) {
         this.name = _name;
+        this.calories = _calories;
         this.meals = _meals;
         this.foodGroups = _foodGroups;
     }
